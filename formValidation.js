@@ -10,11 +10,11 @@ const patterns = {
 // validaion process
 function validate(field, regex) {
   if(regex.test(field.value)) {
-    field.classList.add('valid');
-    field.classList.remove('invalid');
+    field.classList.add('is-valid');
+    field.classList.remove('is-invalid');
   } else {
-    field.classList.add('invalid');
-    field.classList.remove('valid');
+    field.classList.add('is-invalid');
+    field.classList.remove('is-valid');
   }
 };
 
