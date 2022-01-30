@@ -7,6 +7,7 @@ const patterns = {
   password: /^[\w@-]{8,20}$/,
 };
 
+// validation process
 function validate(field, regex) {
   if(regex.test(field.value)) {
     field.classList.add('is-valid');
