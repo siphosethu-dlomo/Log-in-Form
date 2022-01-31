@@ -17,7 +17,7 @@ function validate(field, regex) {
     field.classList.remove('is-valid');
   }
   if(field.id === 'username') {
-    localStorage.setItem('username', field.value);
+    localStorage.setItem('username', field.value)
   }
 };
 
