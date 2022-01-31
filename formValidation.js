@@ -16,6 +16,9 @@ function validate(field, regex) {
     field.classList.add('is-invalid');
     field.classList.remove('is-valid');
   }
+  if(field.id === 'username') {
+    localStorage.setItem('username', field.value);
+  }
 };
 
 inputs.forEach(input => {
@@ -23,3 +26,8 @@ inputs.forEach(input => {
     validate(e.target, patterns[e.target.attributes.name.value]);
   });
 });
+
+// dynamic welcome message
+const username = localStorage.getItem('username');
+const welcomeMessage = `<h1 class="text-center mb-5">Logged in ${username}!</h1>`;
+document.querySelector('.welcome-message').innerHTML = welcomeMessage;
